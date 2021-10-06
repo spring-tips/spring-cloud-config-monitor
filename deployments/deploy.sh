@@ -11,8 +11,8 @@ function deploy_module(){
   NAME=$1
   echo "going to deploy $NAME"
   cd $NAME
-  IMAGE_NAME=bootiful/$NAME
-  mvnw -DskipTests=true clean package spring-boot:build-image \
+  IMAGE_NAME=pgtm-jlong/$NAME
+  ./mvnw -DskipTests=true clean package spring-boot:build-image \
         -Dspring-boot.build-image.imageName=$IMAGE_NAME
   docker push $IMAGE_NAME
   cd ..

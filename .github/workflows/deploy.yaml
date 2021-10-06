@@ -2,9 +2,9 @@ name: Deploy
 
 env:
   GCLOUD_ZONE: us-central1
+  GKE_CLUSTER_NAME: cd-with-flux
   GCLOUD_PROJECT: ${{ secrets.GCLOUD_PROJECT }}
   GCLOUD_SA_KEY: ${{ secrets.GCLOUD_SA_KEY }}
-  GKE_CLUSTER_NAME: cd-with-flux
 
 on:
   push:
