@@ -1,0 +1,33 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: config-client-deployment
+  labels:
+    app: config-client
+spec:
+  selector:
+    matchLabels:
+      app: config-client
+  template:
+    metadata:
+      labels:
+        app: config-client
+    spec:
+      containers:
+        - name: config-client
+          image: gcr.io/pgtm-jlong/config-client
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: config-client-service
+spec:
+  selector:
+    app: config-client
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+
+
