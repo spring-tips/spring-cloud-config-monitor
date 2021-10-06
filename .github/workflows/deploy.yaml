@@ -3,9 +3,9 @@ name: Deploy
 
 env:
 
-  GCLOUD_ZONE: ${{ env.GCLOUD_ZONE }}
-  GCLOUD_PROJECT: ${{ env.GCLOUD_PROJECT }}
-  GCLOUD_SA_KEY: ${{ env.GCLOUD_SA_KEY }}
+  GCLOUD_ZONE: ${{ secrets.GCLOUD_ZONE }}
+  GCLOUD_PROJECT: ${{ secrets.GCLOUD_PROJECT }}
+  GCLOUD_SA_KEY: ${{ secrets.GCLOUD_SA_KEY }}
 
 on:
   push:
@@ -33,7 +33,7 @@ jobs:
       - uses: google-github-actions/setup-gcloud@master
         with:
           version: '290.0.1'
-          service_account_key: ${{ secrets.GCLOUD_SA_KEY }}
+          service_account_key: ${{ env.GCLOUD_SA_KEY }}
           project_id: ${{ env.GCLOUD_PROJECT }}
           export_default_credentials: true
 
