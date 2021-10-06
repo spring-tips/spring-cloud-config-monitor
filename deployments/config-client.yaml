@@ -2,6 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  namespace: scm
   name: config-client-deployment
   labels:
     app: config-client
@@ -22,8 +23,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
+  namespace: scm
   name: config-client-service
 spec:
+
   selector:
     app: config-client
   ports:
