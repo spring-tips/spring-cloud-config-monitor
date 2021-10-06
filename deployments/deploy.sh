@@ -22,6 +22,6 @@ function deploy_module(){
   cd ..
 }
 
-#deploy_module "config-client"
+deploy_module "config-client"
 #deploy_module "config-server"
 
