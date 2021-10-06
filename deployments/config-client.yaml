@@ -16,6 +16,7 @@ spec:
     spec:
       containers:
         - name: config-client
+          imagePullPolicy: Always
           image: gcr.io/pgtm-jlong/config-client
 ---
 apiVersion: v1
