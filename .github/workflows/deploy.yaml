@@ -6,7 +6,6 @@ env:
   GCLOUD_ZONE: ${{ secrets.GCLOUD_ZONE }}
   GCLOUD_PROJECT: ${{ secrets.GCLOUD_PROJECT }}
   GCLOUD_SA_KEY: ${{ secrets.GCLOUD_SA_KEY }}
-  GH_PERSONAL_ACCESS_TOKEN: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
 
 on:
   push:
