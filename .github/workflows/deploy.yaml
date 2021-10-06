@@ -6,6 +6,7 @@ env:
   GCLOUD_ZONE: ${{ secrets.GCLOUD_ZONE }}
   GCLOUD_PROJECT: ${{ secrets.GCLOUD_PROJECT }}
   GCLOUD_SA_KEY: ${{ secrets.GCLOUD_SA_KEY }}
+  GKE_CLUSTER_NAME: cd-with-flux
 
 on:
   push:
