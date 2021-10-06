@@ -5,7 +5,7 @@ env:
 
   GCLOUD_ZONE: ${{ secrets.GCLOUD_ZONE }}
   GCLOUD_PROJECT: ${{ secrets.GCLOUD_PROJECT }}
-  GCLOUD_SA_KEY: ${{ secrets.GCLOUD_SA_KEY }}
+  # GCLOUD_SA_KEY: ${{ secrets.GCLOUD_SA_KEY }}
 
 on:
   push:
