@@ -2,7 +2,9 @@
 set -e
 # docker run  -p 15672:15672 -p 5672:5672 rabbitmq:3-management  
 
-kubectl apply -f  deployments
+#kubectl apply -f  deployments
+kubectl apply -f  deployments/ns.yaml
+kubectl apply -f  deployments/rmq.yaml
 
 # to use the container locally, u can do port-forwarding like this: 
 # kubectl port-forward deployments/rabbitmq-deployment 5672:5672 15672:15672
@@ -24,6 +26,6 @@ function deploy_module(){
   kubectl apply -f deployments/$NAME.yaml
 }
 
-#deploy_module "config-client"
 deploy_module "config-server"
+deploy_module "config-client"
 
