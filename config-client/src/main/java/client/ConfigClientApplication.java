@@ -38,8 +38,7 @@ public class ConfigClientApplication {
 
     @Bean
     ApplicationRunner runner() {
-        return args ->
-                System.getenv().forEach((k, v) -> System.out.println(k + "=" + v));
+        return args -> System.getenv().forEach((k, v) -> System.out.println(k + "=" + v));
     }
 }
 
@@ -47,7 +46,6 @@ public class ConfigClientApplication {
 @ResponseBody
 @RequiredArgsConstructor
 class PropertyHttpController {
-
 
     private final Environment environment;
 
