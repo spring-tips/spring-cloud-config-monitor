@@ -1,9 +1,6 @@
 name: Deploy
 
-
 env:
-
-  # GCLOUD_ZONE: ${{ secrets.GCLOUD_ZONE }}
   GCLOUD_ZONE: us-central1
   GCLOUD_PROJECT: ${{ secrets.GCLOUD_PROJECT }}
   GCLOUD_SA_KEY: ${{ secrets.GCLOUD_SA_KEY }}
@@ -12,7 +9,6 @@ env:
 on:
   push:
     branches: [ main ]
-
 
 jobs:
   build:
@@ -48,4 +44,4 @@ jobs:
       - name: Deploy API
         run: |
           cd $GITHUB_WORKSPACE
-          ./deploy/deploy.sh
+          ./deployments/deploy_bus.sh
