@@ -1,0 +1,37 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: scm
+  name: config-server-deployment
+  labels:
+    app: config-server
+spec:
+  selector:
+    matchLabels:
+      app: config-server
+  template:
+    metadata:
+      labels:
+        app: config-server
+    spec:
+      containers:
+        - name: config-server
+          imagePullPolicy: Always
+          image: gcr.io/pgtm-jlong/config-server:latest
+---
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: scm
+  name: config-server-service
+spec:
+
+  selector:
+    app: config-server
+  ports:
+    - protocol: TCP
+      port: 8888
+      targetPort: 8888
+
+
