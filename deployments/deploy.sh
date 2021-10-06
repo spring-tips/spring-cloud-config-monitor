@@ -23,6 +23,6 @@ function deploy_module(){
   kubectl apply -f deployments/$NAME.yaml
 }
 
-deploy_module "config-client"
-#deploy_module "config-server"
+#deploy_module "config-client"
+deploy_module "config-server"
 
