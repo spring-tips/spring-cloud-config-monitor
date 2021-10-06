@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  creationTimestamp: "2021-10-06T08:44:10Z"
+  name: scm
+  resourceVersion: "727793"
+  uid: f2bb1533-8cb9-40e2-9b1c-6432bec6ddd5
+spec:
+  finalizers:
+  - kubernetes
+status:
+  phase: Active
