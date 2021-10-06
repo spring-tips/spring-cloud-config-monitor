@@ -20,8 +20,9 @@ function deploy_module(){
         -Dspring-boot.build-image.imageName=$IMAGE_NAME
   docker push $IMAGE_NAME
   cd ..
+  kubectl apply -f deployments/$NAME.yaml
 }
 
-deploy_module "config-client"
+#deploy_module "config-client"
 #deploy_module "config-server"
 

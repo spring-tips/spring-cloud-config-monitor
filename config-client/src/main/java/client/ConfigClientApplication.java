@@ -25,6 +25,7 @@ public class ConfigClientApplication {
         return args -> System.getenv().forEach((k, v) -> System.out.println(k + "=" + v));
     }
 }
+/*
 
 @Component
 @RequiredArgsConstructor
@@ -39,4 +40,4 @@ class PropertyListener {
     public void refresh() {
         System.out.println("the new value is " + this.environment.getProperty("cnj.message"));
     }
-}
+}*/
