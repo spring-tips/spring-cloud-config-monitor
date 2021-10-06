@@ -3,6 +3,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  namespace: scm
   name: rabbitmq-deployment
   labels:
     app: rabbitmq
@@ -24,6 +25,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
+  namespace: scm
   name: rabbitmq-service
 spec:
   selector:
