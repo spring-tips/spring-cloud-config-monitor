@@ -46,7 +46,7 @@ public class ConfigClientApplication {
 @Controller
 @ResponseBody
 @RequiredArgsConstructor
-class PropertyController {
+class PropertyHttpController {
 
 
     private final Environment environment;
