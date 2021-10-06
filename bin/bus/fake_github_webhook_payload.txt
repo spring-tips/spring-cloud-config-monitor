@@ -1,0 +1,25 @@
+{
+    "ref": "refs/heads/main",
+    "commits": [
+        {
+            "id": "c2ec39dbcd155dc37da3d10e2206ffb808a00aa1",
+            "distinct": true,
+            "message": "test",
+            "timestamp": "2012-07-04T14:55:04-04:00",
+            "url": "https://github.com/cloud-native-java-with-k8s-livelessons/configuration-config/commit/c2ec39dbcd155dc37da3d10e2206ffb808a00aa1",
+            "author": {
+                "name": "Josh",
+                "email": "josh@joshlong.com",
+                "username": "joshlong"
+            },
+            "committer": {
+                "name": "Josh",
+                "email": "josh@joshlong.com",
+                "username": "joshlong"
+            },
+            "added": [],
+            "removed": [],
+            "modified": ["client.properties"]
+        }
+    ]
+}
