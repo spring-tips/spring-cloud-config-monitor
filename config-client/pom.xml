@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>cnj</groupId>
-    <artifactId>basics</artifactId>
+    <artifactId>config-client</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>basics</name>
-    <description>basics</description>
+    <name>config-client</name>
+    <description>config-client</description>
     <properties>
         <spring-cloud.version>2020.0.3</spring-cloud.version>
         <java.version>17</java.version>

@@ -1,5 +1,39 @@
-apiVersion: rabbitmq.com/v1beta1
-kind: RabbitmqCluster
+
+---
+apiVersion: apps/v1
+kind: Deployment
 metadata:
-    name: bus
-    namespace:  spring-cloud-monitor
+  name: rabbitmq-deployment
+  labels:
+    app: rabbitmq
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rabbitmq
+  template:
+    metadata:
+      labels:
+        app: rabbitmq
+    spec:
+      containers:
+      - name: rabbitmq
+        image: rabbitmq:3-management 
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: rabbitmq-service
+spec:
+  selector:
+    app: rabbitmq
+  ports:
+    - name: http
+      protocol: TCP
+      port: 5672
+      targetPort: 5672
+    - name: https
+      protocol: TCP
+      port: 15672
+      targetPort: 15672
