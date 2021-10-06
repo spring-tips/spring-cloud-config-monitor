@@ -26,9 +26,10 @@ metadata:
   namespace: scm
   name: config-client-service
 spec:
-
+  type: LoadBalancer
   selector:
     app: config-client
+
   ports:
     - protocol: TCP
       port: 8080

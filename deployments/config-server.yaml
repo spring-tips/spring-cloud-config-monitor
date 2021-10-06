@@ -26,6 +26,7 @@ metadata:
   namespace: scm
   name: config-server-service
 spec:
+  type: LoadBalancer
   selector:
     app: config-server
   ports:
