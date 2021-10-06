@@ -1,4 +1,5 @@
-package cnj.basics;
+package client;
+
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.SpringApplication;
@@ -11,10 +12,10 @@ import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
 
 @SpringBootApplication
-public class BasicsApplication {
+public class ConfigClientApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(BasicsApplication.class, args);
+        SpringApplication.run( ConfigClientApplication.class, args);
     }
 
 }
