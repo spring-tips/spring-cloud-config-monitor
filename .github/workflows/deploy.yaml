@@ -44,4 +44,4 @@ jobs:
       - name: Deploy API
         run: |
           cd $GITHUB_WORKSPACE
-          ./deployments/deploy_bus.sh
+          ./deployments/deploy.sh
