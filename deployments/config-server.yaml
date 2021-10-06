@@ -26,7 +26,6 @@ metadata:
   namespace: scm
   name: config-server-service
 spec:
-
   selector:
     app: config-server
   ports:
